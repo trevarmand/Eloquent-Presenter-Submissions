@@ -1,0 +1,109 @@
+// Ingredients
+
+//crema sauce:
+sour_cream = ½ cup sour cream
+mayo = ½ cup of mayo
+chili_powder = ½ teaspoon of chili powder
+cumin = ½ teaspoon of cumin
+oregano = ½ teaspoon of oregano
+garlic_powder = ¼ teaspoon of garlic powder
+sea_salt = ½ teaspoon of sea salt
+black_pepper = a dash of black pepper
+lime_juice = ¼ cup of lime juice (or just a few really good squeezes)
+cilantro = ¼ cup cilantro
+jalapeño = small jalapeño diced
+
+// beer battered fish:
+fish = A few pieces of fresh white fish, I recommend tilapia
+flour = 1 cup of flour
+sea_salt = 1 teaspoon of salt
+sugar = 1 teaspoon of granulated sugar
+baking_powder = ½ teaspoon of baking powder
+beer = 1 cup of Mexican beer (like Modelo)
+hot_sauce = ½ teaspoon of hot sauce
+oil = 24 fluid ounce of frying oil, like vegetable oil or grapeseed oil
+
+// garnish and taco ingredients:
+tortillas = mini corn tortillas
+cabbage = a green cabbage or bag of shredded cabbage
+onion = one red onion
+lime = several limes cut into slices
+cheese = shredded monterey jack cheese
+
+// ingredient lists
+baja_sauce_ingredients = [sour_cream, mayo, chili_powder, cumin, oregano, garlic_powder, sea_salt, black_pepper, lime_juice, cilantro, jalapeño ]
+beer_batter_ingredients = [flour, sea_salt, sugar, baking_powder, beer, hot_sauce ]
+garnish_ingredients = [ cabbage, onion, lime ]
+
+Total_cook_time = 1 hour
+
+// prepare items for tacos
+baja_sauce:
+	for ingredient in baja_sauce_ingredients:
+		add ingredient to a small bowl
+	Mix contents
+	Taste for seasoning
+	If crema needs more $ingredient$:
+		add more $ingredient$
+	Cover bowl and place in fridge
+	End
+
+beer_batter:
+	for ingredient in beer_batter_ingredients:
+		add ingredient to medium size bowl
+	Until batter consistency = pancake batter:
+		Mix batter
+	If there are flour chunks in batter:
+		Mix again
+	Set aside
+	End
+
+fried_fish:
+	Grab plate and put paper towel on plate
+	Place plate aside for later
+	Pour oil into pot and turn on stove high heat
+	If pot shallow:
+		Switch to a deeper pot
+	If oil in pot not 1-2 inches deep:
+		Add more oil
+	Cut fish into chunks about 3-4 inches long
+	If fish = too big to fit in tortilla:
+		Cut smaller
+	Salt both sides of the fish
+	For each fish_chunk:
+		Roll around in beer batter until coated
+		Drop slowly into oil
+		If fish stuck to bottom of pot:
+			Use fork to unstick it immediately
+		Wait(1 min)
+		Flip fish
+		Wait(1 min)
+		If fish = golden brown:
+			remove from oil
+		Else
+			Wait(30 sec) or until golden brown
+		Place fish on plate with paper towel
+	While oil = hot:
+		Wait(5 min)
+		If oil = cool:
+			pour in old jar and throw away
+		Else:
+			Wait(5 min)
+	End
+
+garnish:
+	For garnish in garnish_ingredients:
+		Slice and set aside
+	For tortilla in tortillas:
+		Heat up in pan and set aside
+	Grab cheese and set aside
+	End
+	
+
+// prepare tacos
+tacos:
+	For tortilla in tortillas:
+		Add baja_sauce, fried_fish, garnish
+		Enjoy!
+
+
