@@ -1,0 +1,62 @@
+class kitchen {
+    cookBacon(bacon) {
+        pan = kitchen.getPan(medium)
+        burner = kitchen.Stove.StartBurner(medium)
+        burner.load(pan)
+        pan.load(bacon)
+        wait(3.minutes)
+        kitchen.getSpatula().flipContentsOf(pan)
+        wait(3.minutes)
+        burner.stop()
+        return pan.unload(bacon)
+    }
+
+    cookEggs(eggs) {
+        pan = kitchen.getPan(small)
+        burner = kitchen.Stove.StartBurner(low)
+        burner.load(pan)
+        pan.load(kitchen.getOil(1tsp))
+        pan.load(eggs[0].crack()))
+        pan.load(eggs[1].crack())
+        wait(2.minutes)
+        kitchen.getSpatula().flipContentsOf(pan)
+        burner.stop()
+        burner.unload(pan)
+        wait(30.seconds)
+        return pan.unload(eggs)
+    }
+
+    toastBagel(contents) {
+        toaster = kitchen.getToaster()
+        toaster.preheat(30.seconds)
+        return toaster.toast(contents, light)
+    }
+}
+
+
+main {
+    const egg, bacon, bagel, cheese
+    async {
+        cheese = new Cheese("american").slice()
+        bagelSlices = new Bagel("everything").halve()
+        eggs = [new Egg(), new Egg()]
+
+        kitchen = new Kitchen()
+
+        kitchen.cookBacon()
+        kitchen.cookEgg()
+        kitchen.toastBagel(bagelSlices)
+    }
+
+    while egg, protein, bagel == null {
+        wait()
+    }
+
+    plate = kitchen.getPlate()
+
+    plate.load(bagelSlices[0])
+    plate.stackItem(egg)
+    plate.stackItem(cheese)
+    plate.stackItem(bacon)
+    plate.stackItem(bagelSlices[1])
+}
