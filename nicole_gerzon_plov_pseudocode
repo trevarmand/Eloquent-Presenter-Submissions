@@ -1,0 +1,61 @@
+// pseudo code attempt??
+
+
+// define variables for plov 
+meat = 1kg of lamb
+rice = 1kg of rice
+onions = 2 onions
+carrots = 5 carrots 
+garlic = 1 head of garlic 
+seasoning = 1 packet plov seasoning 
+
+
+//define variables for side salad
+tomatoes = 3 beef tomatoes
+salad_onions = 2 sweet onion
+
+
+// define other vars
+pot = pot with thick bottom 
+
+
+// start ingredient prep
+meat = meat.split(bite-sized pieces); 
+
+rice = soak(wash(rice), salted_water); 
+
+onions = julienne(onions)
+
+carrots = juilienne(carrots)
+
+// start adding in ingredients
+pot.set(medium_heat)
+pot.add(vedgetable oil)
+wait(5 mins)
+pot.add(meat)
+wait(13 mins)
+pot.add(onions)
+pot.add(carrots)
+pot.wait(13 mins)
+pot.add(rice)
+pot.add(salted_water)
+pot.add(seasoning)
+pot.add(garlic)
+pot.cover()
+pot.set(low_heat)
+pot.wait(20 mins)
+pot.set(no_heat)
+pot.wait(10 mins)
+
+// define the plov
+plov = pot.inside
+
+// make side salad
+salad.add(julienne(tomatoes))
+salad.add(julienne(salad_onions))
+salad.season()
+salad.serve()
+
+plov.mix
+plov.serve
+
