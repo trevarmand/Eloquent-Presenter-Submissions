@@ -1,59 +1,112 @@
 Recipe Walkthrough
 Today I will be teaching you all how to make beer battered fish tacos. Also known as Baja fish tacos, these tacos are very popular in Mexico and southern California, specifically San Diego where I am from. This type of taco holds a very special place in my heart since I grew up eating them and still love them to this day. They are light, flavorful, and crunchy. They are truly a San Diego staple.
 
+// Ingredients
 
-1.	Gather the ingredients:
-	a.For the Baja sauce crema:
-		i.½ cup sour cream
-		ii.½ cup of mayo
-		iii.½ teaspoon of chili powder
-		iv.½ teaspoon of cumin
-		v.½ teaspoon of oregano
-		vi.¼ teaspoon of garlic powder
-		vii.½ teaspoon of sea salt
-		viii.a dash of black pepper
-		ix.¼ cup of lime juice (or just a few really good squeezes)
-		x.¼ cup cilantro
-		xi.a small jalapeño diced
-	b.For the beer battered fish
-		i.A few pieces of fresh white fish, I recommend tilapia
-		ii.1 cup of flour
-		iii.1 teaspoon of salt
-		iv.1 teaspoon of granulated sugar
-		v.½ teaspoon of baking powder
-		vi.1 cup of Mexican beer (like Modelo)
-		vii.½ teaspoon of hot sauce
-		viii.Frying oil, like vegetable oil or grapeseed oil
-	c.Garnish and taco ingredients
-		i.Mini corn tortillas
-		ii.Green cabbage
-		iii.Red onion
-		iv.Several limes
-		v.Monterey Jack cheese
-2.Prepare the Baja sauce
-	a.Mix all the ingredients into a small bowl.
-	b.These measurements are all suggestions, season it to taste how you like it.
-	c.Cover and put in the fridge to chill.
-3.Prepare the beer batter.
-	a.Mix all the ingredients in a medium size bowl.
-	b.Stir until it’s the consistency of pancake batter, making sure there are no chunks of flour.
-	c.Set aside while we prepare the fish.
-4.Prepare the fish for frying
-	a.Cut the fish into slices big enough to fit inside a mini corn tortilla, about 3-4 inches long. Rather too small than too big.
-	b.Then, salt both sides of the fish.
-	c.Drop the fish into the batter and roll around in the bowl until its fully coated.
-5.Fry the fish
-	a.I used a whole bottle of grapeseed oil (24 fluid oz) but you can also use vegetable oil.
-	b.The oil should be about 1-2 inches deep in the pot, and you want to pick a pot that has taller sides, because the frying process can be messy, and you want to minimize splash.
-	c.Drop the coated fish into the oil slowly with a fork, be careful because it may try and stick to the bottom of the pot, and you don’t want that to happen because when it unsticks, the batter will fall off.
-	d.Flip the fish in the oil so both sides fry evenly, take them out after a few minutes or when they are golden brown.
-	e.I used two forks to get the fish out of the oil, but you can use a wire netted spoon or tongs.
-	f.Set a plate to the side with a paper towel on it before hand and rest the fish on this plate when they are done frying.
-	g.When you are done frying, turn off the stove and let the oil cool. When it is cool, pour it into a jar or bottle and throw away, instead of pouring down the sink.
-6.Prepare the garnish and assemble the tacos.
-	a.Thinly slice the green cabbage and red onion and set aside.
-	b.Take the Baja sauce out of the fridge. 
-	c.Heat up a corn tortilla.
-	d.Put on the tortilla a piece of fish, a sprinkle of Monterey jack cheese, green cabbage, red onion, a squeeze of lime, and a generous dollop of the crema.
-	e.Enjoy!
-Total cook time – 1 hour.
+//crema sauce:
+sour_cream = ½ cup sour cream
+mayo = ½ cup of mayo
+chili_powder = ½ teaspoon of chili powder
+cumin = ½ teaspoon of cumin
+oregano = ½ teaspoon of oregano
+garlic_powder = ¼ teaspoon of garlic powder
+sea_salt = ½ teaspoon of sea salt
+black_pepper = a dash of black pepper
+lime_juice = ¼ cup of lime juice (or just a few really good squeezes)
+cilantro = ¼ cup cilantro
+jalapeño = small jalapeño diced
+
+// beer battered fish:
+fish = A few pieces of fresh white fish, I recommend tilapia
+flour = 1 cup of flour
+sea_salt = 1 teaspoon of salt
+sugar = 1 teaspoon of granulated sugar
+baking_powder = ½ teaspoon of baking powder
+beer = 1 cup of Mexican beer (like Modelo)
+hot_sauce = ½ teaspoon of hot sauce
+oil = 24 fluid ounce of frying oil, like vegetable oil or grapeseed oil
+
+// garnish and taco ingredients:
+tortillas = mini corn tortillas
+cabbage = a green cabbage or bag of shredded cabbage
+onion = one red onion
+lime = several limes cut into slices
+cheese = shredded monterey jack cheese
+
+// ingredient lists
+baja_sauce_ingredients = [sour_cream, mayo, chili_powder, cumin, oregano, garlic_powder, sea_salt, black_pepper, lime_juice, cilantro, jalapeño ]
+beer_batter_ingredients = [flour, sea_salt, sugar, baking_powder, beer, hot_sauce ]
+garnish_ingredients = [ cabbage, onion, lime ]
+
+Total_cook_time = 1 hour
+
+// prepare items for tacos
+baja_sauce:
+	for ingredient in baja_sauce_ingredients:
+		add ingredient to a small bowl
+	Mix contents
+	Taste for seasoning
+	If crema needs more $ingredient$:
+		add more $ingredient$
+	Cover bowl and place in fridge
+	End
+
+beer_batter:
+	for ingredient in beer_batter_ingredients:
+		add ingredient to medium size bowl
+	Until batter consistency = pancake batter:
+		Mix batter
+	If there are flour chunks in batter:
+		Mix again
+	Set aside
+	End
+
+fried_fish:
+	Grab plate and put paper towel on plate
+	Place plate aside for later
+	Pour oil into pot and turn on stove high heat
+	If pot shallow:
+		Switch to a deeper pot
+	If oil in pot not 1-2 inches deep:
+		Add more oil
+	Cut fish into chunks about 3-4 inches long
+	If fish = too big to fit in tortilla:
+		Cut smaller
+	Salt both sides of the fish
+	For each fish_chunk:
+		Roll around in beer batter until coated
+		Drop slowly into oil
+		If fish stuck to bottom of pot:
+			Use fork to unstick it immediately
+		Wait(1 min)
+		Flip fish
+		Wait(1 min)
+		If fish = golden brown:
+			remove from oil
+		Else
+			Wait(30 sec) or until golden brown
+		Place fish on plate with paper towel
+	While oil = hot:
+		Wait(5 min)
+		If oil = cool:
+			pour in old jar and throw away
+		Else:
+			Wait(5 min)
+	End
+
+garnish:
+	For garnish in garnish_ingredients:
+		Slice and set aside
+	For tortilla in tortillas:
+		Heat up in pan and set aside
+	Grab cheese and set aside
+	End
+	
+
+// prepare tacos
+tacos:
+	For tortilla in tortillas:
+		Add baja_sauce, fried_fish, garnish
+		Enjoy!
+
+
