@@ -1,0 +1,72 @@
+lobsterStock:
+  Initialize pot with 6 cups of water;
+  While water is not boiling:
+    Heat the water;
+  
+  Add lobster with shell to pot;
+  Set timer to 4 minutes;
+  While timer not expired:
+    Continue loop;
+  
+  Move lobster to ice water;
+  Dice the lobster;
+  Move the shells back to the boiling water;
+
+  For each ingredient in [ onion, carrot, celery, tomato, bay leaf, salt, pepper ]:
+    If ingredient unavailable:
+      It will probably be fine;
+      Continue loop;
+    Add ingredient to the boiling water
+
+  Reduce heat to simmer;
+
+  Set timer to 20 minutes;
+  While timer not expired:
+    Continue loop;
+
+  Return finished lobster stock;
+End
+
+lobsterRisotto:
+  Call lobsterStock and store the stock on medium-low heat;
+
+  For each ingredient in [ olive oil || some other oil, minced shallots, minced garlic ]:
+    Add ingredient to pan;
+  Set pan to medium heat;
+
+  Fork the process into process1 and process2;
+
+  If in process1:
+    While no rice in pan || timer not expired:
+      If garlic is slightly browned:
+        Add rice to pan;
+        Set timer to 2 minutes;
+      Else:
+        Continue loop;
+  
+  If in process2:
+    Add white wine to pan;
+    Set timer to 2 minutes;
+    While timer not expired:
+      Cook wine on medium heat;
+    
+  While both processes not finished:
+    Continue loop;
+
+  Add lobster stock / 2 to rice pan;
+  Add reduced wine to rice pan;
+
+  While rice has not absorbed most of the liquid:
+    Continue loop;
+  
+  While lobster stock not empty && rice not slightly transleucent:
+    Add big spoonfull of lobster stock to rice;
+  
+  For each ingredient in [ diced lobster, butter, cream cheese, lemon juice, salt, pepper ]:
+    Add ingredient to rice;
+  
+  While ingredients not mixed && risotto not too thick:
+    Stir ingredients;
+
+  Return lobster risotto;
+End
