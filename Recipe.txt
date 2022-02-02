@@ -1,0 +1,79 @@
+# Ingredients
+ground_beef.amount = 12 oz
+onion.amount = 1 whole
+butter.amount = 1/4 stick
+cream_of_mushroom_soup.amount = 1 can
+milk.amount = 1/2 cup
+# Recommended: bow-tie pasta (optional)
+pasta.amount = 1 box
+water.amount = pasta.box_instructions
+
+# Before starting
+onion.dice()
+ground_beef.season('salt','pepper')
+
+# Start cooking
+skillet.heat('medium')
+skillet.add(butter)
+
+while(!butter.isMelted()) {
+	wait();
+}
+
+skillet.add(onion)
+
+
+while(!onion.isBrowned()) {
+	wait(10)
+	stir()
+}
+
+skillet.add(ground_beef)
+
+while(!ground_beef.isFullyCooked()) {
+	wait(30)
+	stir()
+}
+
+skillet.add(cream_of_mushroom_soup)
+stir()
+
+skillet.add(milk)
+stir()
+
+skillet.add('salt','pepper')
+
+# Temperature in the pan has dropped
+while(skillet.temp != desired_temp) {
+	wait(30)
+	stir()
+}
+
+skillet.heat('off')
+skillet.coverWithLid()
+
+hamburger_gravy = skillet.contents
+
+# Sauce is done, time to cook the pasta
+pot.add(water)
+pot.season('salt')
+pot.heat('high')
+
+while(!water.isBoiling()) {
+	wait(30)
+}
+
+pot.add(pasta)
+
+while(!pasta.isFullyCooked()) {
+	wait(30)
+	stir()
+}
+
+pot.heat('off')
+pot.strain()
+
+# Cooking is done, time to eat
+plate.add(pasta)
+plate.add(hamburger_gravy)
+plate.contents.eat()
