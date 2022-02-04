@@ -1,0 +1,52 @@
+// Ingredients: 
+peruvian_chocolate = 100 grams
+whole_milk = 7.5 cups
+evaporated_milk = 1 can
+white_sugar = 2 tablespoons
+vanilla_extract = 2 tablespoons
+cinnamon = 2 sticks
+water = 3/4 cups
+cloves = 12 pieces
+oranges = 2 whole oranges
+
+// Materials: 
+small_pot;
+big_pot;
+cheese_grater;
+knife;
+large_spoon;
+
+func prep: 
+    cheese_grater.grate(peruvian_chocolate) = grated_peruvian_chocolate;
+    knife.peel(oranges) = orange_peels;
+
+func instructions: 
+    prep();
+
+    stove.add(small_pot).set(high heat);
+    small_pot.add([water, cinnamon_sticks, cloves]);
+    stove.boil(small_pot);
+
+    if (5 minutes) {
+        small_pot.remove([cinnamon_sticks, cloves], small_pot);
+        water_mixture = small_pot.contents();
+        stove.take_off(small_pot);
+    }
+
+    stove.add(big_pot, low heat);
+    big_pot.add([water_mixture, vanilla_extract, grated_peruvian_chocolate]);
+    while(big_pot.contents_texture != thick) {
+        big_pot.mix(large_spoon);
+    } 
+    big_pot.add([milk, evaporated_milk, white_sugar, orange_peels]);
+    while(taste != satisfactory) {
+        if(8 minutes) {
+            big_pot.remove([orange_peels]);
+        }
+        big_pot.mix(large_spoon);
+    }
+
+func serving: 
+    drink(hot chocolate);
+    eat(Panetón);
+
