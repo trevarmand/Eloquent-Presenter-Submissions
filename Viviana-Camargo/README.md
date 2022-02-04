@@ -1,0 +1,2 @@
+# Peruvian Hot Chocolate #
+This project contains a recipe walkthrough for Peruvian hot chocolate using pseudocode. The recipe creates approximately 9 cups and takes approximately 45 minutes to make. For some context, it is tradition for my family to enjoy this recipe during Christmas. The rarity of this recipe is what makes it so special as my grandma was only known to make this recipe during the holidays because when she lived in Peru, this recipe was a luxurious item. 
