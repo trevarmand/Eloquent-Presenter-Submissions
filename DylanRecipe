@@ -1,0 +1,56 @@
+def makeScallionGingerChicken(Ingredients,Kitchenware):
+	pot = Kitchenware.get(Pot)
+	water = Ingredients.get(Water)
+	salt = Ingredients.get(Salt)
+
+	pot.fill(water)
+	pot.add(salt,1)
+
+	while (pot.get(water).state != boiling):
+		self.wait(1)
+
+	chicken = Ingredients.get(Chicken)
+	pot.add(chicken)
+	pot.cover()
+
+	knife = Kitchenware.get(Knife)
+	ginger = Ingredients.get(Ginger)
+	greenOnion = Ingredients.get(Green Onion)
+
+	knife.mince(ginger)
+	knife.mince(greenOnion)
+
+	pan = Kitchenware.get(Pan)
+	oil = Ingredients.get(Oil)
+
+	pan.add(oil,5)
+
+	while (pan.get(oil).temperature < 350):
+		self.wait(1)
+
+	pan.add(ginger)
+	self.wait(15)
+	pan.add(greenOnion)
+	self.wait(25)
+
+	sauceBowl = Kitchenware.get(Small Bowl)
+	sauceBowl.add(pan.getAll())
+
+	iceBowl = Kitchenware.get(Large Bowl)
+	ice = Ingredients.get(Ice)
+	iceBowl.add(ice)
+	iceBowl.fill(water)
+
+	while (pot.get(chicken).state != cooked)
+		self.wait(1)
+
+	pot.remove(chicken)
+	iceBowl.add(chicken)
+	self.wait(300)
+
+	chicken.carve()
+
+ingredients = [Whole chicken, (Green onion, 2oz), (Ginger, 1.5oz), (Oil, 5tbsp), (Salt, 3tsp), Water]
+kitchenware = [Pot, Pan, Knife, Large Bowl, Small Bowl]
+
+makeScallionGingerChicken(ingredients, kitchenware)
