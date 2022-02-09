@@ -1,5 +1,7 @@
 #lang racket
 
+;;; Entities
+
 (define-struct ingredient [name quantity])
 ; An Ingredient is a structure:
 ;   (make-ingredient String String)
@@ -11,6 +13,8 @@
 ; intepretation a medium saucepan containing the listed ingredients which either is or isn't covered,
 ;   either has or has not been stirred, has been cooked for the given duration (in minutes), and has
 ;   sat for the given duration (in minutes)
+
+;;; Transactions
 
 ; Medium-Saucepan -> Medium-Saucepan
 ; covers the given saucepan
@@ -105,6 +109,8 @@
           "1 cup")))
       (make-ingredient "oatmeal" "2 servings")]
     [else "Unknown recipe"]))
+
+;;; Execution
 
 (serve
   (stir-saucepan
