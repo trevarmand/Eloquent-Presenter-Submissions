@@ -1,0 +1,65 @@
+from TraderJoes import purchase
+
+gs = GroundSausage()
+ct = CannedTomatoes()
+ba = Basil()
+oo = OliveOil()
+ga = Garlic()
+s = Salt()
+p = Pepper()
+li = Linguine()
+hc = HeavyCream()
+v = Vodka()
+
+pan = BigSaucePan()
+stove = Stove()
+
+ingredients_list = [gs, oo, s, p, ba, ga, v, ct,  hc, li]
+steps = {1: ingredients_list[:4], 
+            2: ingredients_list[4:6], 
+            3: ingredients_list[6], 
+            4: ingredients_list[7], 
+            5: ingredients_list[8], 
+            9: ingredients_list[9]}
+
+def linguine_with_pink_sauce() {
+    for ingredient in ingredients_list {
+        purchase(ingredient)
+    }
+
+    pan.put_on(stove)
+    stove.medium()
+    pan.add(oo, "2 tbs")
+    wait("till hot")
+    pan.add(gs, "1 lb")
+    gs.brown()
+    pan.add(ga, "2 cloves")
+    ga.brown()
+    pan.add(ba, "handfull")
+    pan.add(v, "a little")
+
+    if(chef.wants()){
+        chef.take_shot()
+    }
+
+    v.reduce()
+    wait("vodka reduced")
+
+    pan.add(ct, "1 can")
+    ct.mash()
+    wait("Sauce thickens")
+
+    # In seperate pot
+    li.cook_aldente()
+
+    sauce = pan.contents()
+    while(not sauce.thick()){
+        wait()
+    }
+
+    pan.add(li)
+    pan.stir("3 minutes")
+
+    meal = pan.contents()
+    meal.serve()
+}
