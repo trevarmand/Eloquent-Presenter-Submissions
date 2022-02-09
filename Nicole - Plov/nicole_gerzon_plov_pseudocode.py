@@ -20,7 +20,7 @@ pot = pot with thick bottom
 def julienne(ing_list):
 	for ing in ing_list:
 		ing.cut_very_small_thin_slices()
-	return
+	return 
 
 def soak(ing, medium):
 	medium.put(ing)
@@ -53,8 +53,10 @@ pot.add(garlic)
 pot.cover()
 pot.set(low_heat)
 pot.wait(20 mins)
-pot.set(no_heat)
-pot.wait(10 mins)
+
+if not water in pot:
+	pot.set(no_heat)
+	pot.wait(10 mins)
 
 # define the plov
 plov = pot.inside
@@ -69,6 +71,6 @@ salad.add(julienne(salad_onions))
 season(salad)
 salad.serve()
 
-plov.mix
-plov.serve
+plov.mix()
+plov.serve()
 
