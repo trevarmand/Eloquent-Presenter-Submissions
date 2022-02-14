@@ -1,0 +1,72 @@
+import Peeler;
+import FoodProcessor;
+import PaperTowel;
+import Knife;
+import SaucePan;
+import Pan;
+import Oven;
+
+main() {
+    prep();
+    cook();
+}
+
+prep() {
+    prepZucchiniNoodles();
+    prepScallops();
+    prepGarlicBread();
+}
+
+prepZucchiniNoodles() {
+    while (unpeeledZucchini) {
+        Peeler.peel("Zucchini");
+    }
+
+    FoodProcessor.combine(
+        "Store Bought Pesto", 
+        "Fresh Basil",
+        "Fresh Parmesan",
+        "Cashew Butter");
+}
+
+prepScallops() {
+    PaperTowel.patDown("Scallops");
+}
+
+prepGarlicBread() {
+    Knife.slice("Garlic Bread");
+
+    Knife.chop("Garlic Cloves");
+    SaucePan.add("Chopped Garlic");
+    SaucePan.add("Butter");
+    SaucePan.simmmer();
+}
+
+cook() {
+    MultiprocessingThreads.parallelProcess((thread1, thread2, thread3) => {
+        thread1.cookZucchiniNoodles();
+        thread2.cookScallops();
+        thread3.cookGarlicBread();
+    });
+
+    if (env.MAKE_EXTRA_DELICOUS) {
+        Garnish.add("Freshly Chopped Basil", "Grated Parmesan");
+    }
+}
+
+cookZucchiniNoodles() {
+    Pan.saute("Noodles");
+    Pan.add("Pesto");
+}
+
+cookScallops() {
+    Pan.sear("Scallops");
+    Pan.add("Scallions");
+}
+
+cookGarlicBread() {
+    while (!goldenBrown) {
+        Oven.broil("Garlic Bread");
+    }
+}
+
