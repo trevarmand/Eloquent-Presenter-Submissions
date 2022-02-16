@@ -40,9 +40,6 @@ lobsterRisotto:
       Set timer to 2 minutes;
     Else:
       Continue loop;
-    
-  While both processes not finished:
-    Continue loop;
 
   Add lobster stock / 2 to rice pan;
 
