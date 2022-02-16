@@ -1,0 +1,36 @@
+public class PolToffee {
+  dessicatedCoconut; // 1 cup
+  sugar;             // 1.5 cups
+  vanilla;           // 1 tsp
+  water;             // 1 cup
+  coloring;          // 1 tsp
+  cardamom;          // 1 pod
+
+  batter();          // medium sized pot on the stove
+
+  batter.add(water, sugar, cardamom);
+
+  while(!boiling) {
+    batter.mix();
+  }
+
+  heat--;
+
+  batter.add(dessicatedCoconut);
+
+  while(!batter.thickness().equals("thick")) {
+    batter.mix();
+  }
+
+  batter.add(vanilla, coloring);
+  batter.mix();
+
+  heat = 0;
+
+  batter.remove(cardamom);
+
+  batter.spread();
+  batter.cut();
+
+  serve();
+}
