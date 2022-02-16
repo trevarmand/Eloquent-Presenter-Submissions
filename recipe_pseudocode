@@ -34,27 +34,17 @@ lobsterRisotto:
     Add ingredient to pan;
   Set pan to medium heat;
 
-  Fork the process into process1 and process2;
-
-  If in process1:
-    While no rice in pan || timer not expired:
-      If garlic is slightly browned:
-        Add rice to pan;
-        Set timer to 2 minutes;
-      Else:
-        Continue loop;
-  
-  If in process2:
-    Add white wine to pan;
-    Set timer to 2 minutes;
-    While timer not expired:
-      Cook wine on medium heat;
+  While no rice in pan || timer not expired:
+    If garlic is slightly browned:
+      Add rice to pan;
+      Set timer to 2 minutes;
+    Else:
+      Continue loop;
     
   While both processes not finished:
     Continue loop;
 
   Add lobster stock / 2 to rice pan;
-  Add reduced wine to rice pan;
 
   While rice has not absorbed most of the liquid:
     Continue loop;
